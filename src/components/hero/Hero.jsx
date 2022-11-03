@@ -8,7 +8,7 @@ const Hero = () => {
     <div className={css.container}>
       {/* Lefy side */}
       <div className={css.h_side}>
-        <span>skin protection cream</span>
+        <span className={css.text1}>skin protection cream</span>
         <div className={css.text2}>
           <span>Trendy Collection</span>
           <span>
@@ -21,7 +21,7 @@ const Hero = () => {
       {/* middle hero image */}
       <div className={css.wrapper}>
         <div className={css.blueCircle}></div>
-        <img src={HeroImg} alt='HeroImg' width={600} />
+        <img src={HeroImg} alt='HeroImg' width={450} />
         <div className={css.cart2}>
           <RiShoppingBagFill />
           <div className={css.signup}>
