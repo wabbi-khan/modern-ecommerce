@@ -1,20 +1,20 @@
 import React from "react";
 import "./Slide.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import { SliderProducts } from "../../data/products";
 // * import Swiper style
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 const Slider = () => {
   return (
     <div className='s_container'>
       <Swiper
-        modules={{ Pagination, Navigation }}
+        modules={[Pagination, Navigation]}
         loopFillGroupWithBlank={true}
         navigation={true}
-        sidePerView={3}
+        slidesPerView={3}
         spaceBetween={40}
         slidesPerGroup={1}
         loop={true}
@@ -29,7 +29,7 @@ const Slider = () => {
               <span>{slide.price}$</span>
               <div>Show Now</div>
             </div>
-            <img src={slide.img} alt='ProductImg' />
+            <img src={slide.img} alt='ProductImg' className='img-p' />
           </SwiperSlide>
         ))}
       </Swiper>
