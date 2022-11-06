@@ -38,3 +38,4 @@ const Slider = () => {
 };
 
 export default Slider;
+// swiper library it will help to slider
