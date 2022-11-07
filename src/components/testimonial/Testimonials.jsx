@@ -20,8 +20,14 @@ const Testimonials = () => {
           <span>Happy Customers</span>
         </div>
       </div>
+      <div className={css.reviews}>reviews</div>
       <div className={css.carousal}>
-        <Swiper slidesPerView={3} slidesPerGroup={1} spaceBetween={20}>
+        <Swiper
+          slidesPerView={3}
+          slidesPerGroup={1}
+          spaceBetween={20}
+          className={css.Tcarousal}
+        >
           {TestimonialsData.map((testimonial, i) => (
             <SwiperSlide>
               <div className={css.testimonial} key={i}>
