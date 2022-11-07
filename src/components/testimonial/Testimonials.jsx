@@ -1,6 +1,9 @@
 import React from "react";
 import css from "./Testimonials.module.css";
 import Hero from "../../assets/testimonialHero.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { TestimonialsData } from "../../data/testimonials";
+
 const Testimonials = () => {
   return (
     <div className={css.testimonials}>
@@ -16,6 +19,20 @@ const Testimonials = () => {
           <span>100K</span>
           <span>Happy Customers</span>
         </div>
+      </div>
+      <div className={css.carousal}>
+        <Swiper slidesPerView={3} slidesPerGroup={1} spaceBetween={20}>
+          {TestimonialsData.map((testimonial, i) => (
+            <SwiperSlide>
+              <div className={css.testimonial} key={i}>
+                <img src={testimonial.image} alt='testimonial-img' />
+                <span> {testimonial.comment} </span>
+                <hr />
+                <span>{testimonial.name}</span>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
