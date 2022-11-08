@@ -33,7 +33,7 @@ const Footer = () => {
               <span>01234568989</span>
             </span>
             <span className={css.pngLine}>
-              <LocationMarkerIcon className={css.icon} />
+              <InboxIcon className={css.icon} />
               <span>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
                 nobis.
